@@ -7,6 +7,7 @@ import AboutComponent from '@/components/About/AboutComponent';
 import ContactComponent from '@/components/Contact/Contact';
 import Footer from '@/components/Footer/Footer';
 import Data from '@/Data/projectData';
+import Link from 'next/link';
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -24,7 +25,7 @@ export default function Home() {
             </div>
           </div>
           <div className="flex flex-col md:m-4 overflow-hidden p-2 ">
-            <div><a className="p-2 ring-2 rounded-2xl text-white" href="/Project">See All </a></div>
+            <div><Link className="p-2 ring-2 rounded-2xl text-white" href="/Project">See All </Link></div>
             <div className="md:m-4 md:p-2 grid md:grid-cols-3 grid-flow-row md:gap-24 justify-start md:overflow-x-scroll">
               {SortedData.slice(0, 3).map((project, index) => (
                 <ProjectCard key={index} project={project} />
