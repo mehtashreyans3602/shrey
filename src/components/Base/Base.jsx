@@ -22,7 +22,7 @@ const Base = () => {
 
                         </div>
                     </div>
-                    <Image width={500} height={100} style={{minHeight:'100px',minWidth:'250px', Height: '100px',width:'500px',objectFit:'contain' }} src={Code} alt="NA" className='p-4 hidden md:block' />
+                    <Image width={500} height={100} style={{minHeight:'100px',minWidth:'250px', Height: '100px',width:'500px',objectFit:'contain' }} src={Code} alt="NA" className='p-4 hidden md:block mmotion-safe:animate-bounce-slow' />
                 </div>
             </div>
         </>

@@ -7,7 +7,7 @@ const TimeLine = () => {
     <div className="">
       <div className="text-2xl md:text-center text-white items-center md:justify-center ">
         <div className="flex items-center md:justify-center">
-          <h1 className="p-4 border-b-4 border-blue-800 hover:border-white">My Journey So Far.</h1>
+          <h1 className="p-4 w-full md:w-auto border-b-4 border-blue-800 hover:border-white">My Journey So Far.</h1>
         </div>
       </div>
       <VerticalTimeline lineColor="rgb(30, 64, 175)">

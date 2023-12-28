@@ -86,7 +86,7 @@ const ContactComponent = () => {
                     )}
                     <form className="space-y-4" onSubmit={handleSubmit}>
                         <div>
-                            <label htmlFor="Name" className="block text-sm font-medium text-gray-700">
+                            <label htmlFor="Name" className="block text-sm font-medium text-gray-100">
                                 Name
                             </label>
                             <input
@@ -95,12 +95,12 @@ const ContactComponent = () => {
                                 name="Name"
                                 value={formData.Name} // Add value attribute
                                 onChange={handleChange} // Add onChange event handler
-                                className="mt-1 p-2 w-full border rounded-md"
+                                className="mt-1 py-2 px-4 w-full border rounded-lg bg-white/20 backdrop-blur-lg"
                                 placeholder="Your Name"
                             />
                         </div>
                         <div>
-                            <label htmlFor="Email" className="block text-sm font-medium text-gray-700">
+                            <label htmlFor="Email" className="block text-sm font-medium text-gray-100">
                                 Email
                             </label>
                             <input
@@ -109,12 +109,12 @@ const ContactComponent = () => {
                                 name="Email"
                                 value={formData.Email} // Add value attribute
                                 onChange={handleChange} // Add onChange event handler
-                                className="mt-1 p-2 w-full border rounded-md"
+                                className="mt-1 py-2 px-4 w-full border rounded-lg bg-white/20 backdrop-blur-lg"
                                 placeholder="Your Email"
                             />
                         </div>
                         <div>
-                            <label htmlFor="Message" className="block text-sm font-medium text-gray-700">
+                            <label htmlFor="Message" className="block text-sm font-medium text-gray-100">
                                 Message
                             </label>
                             <textarea
@@ -123,7 +123,7 @@ const ContactComponent = () => {
                                 value={formData.Message} // Add value attribute
                                 onChange={handleChange} // Add onChange event handler
                                 rows="4"
-                                className="mt-1 p-2 w-full border rounded-md"
+                                className="mt-1 py-2 px-4 w-full border rounded-lg bg-white/20 backdrop-blur-lg"
                                 placeholder="Your Message"
                             ></textarea>
                         </div>

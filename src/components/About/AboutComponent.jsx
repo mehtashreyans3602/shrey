@@ -11,17 +11,17 @@ const AboutComponent = () => {
   return (
     <>
       <div className="items-center justify-center text-center bg-black">
-        <div className="text-5xl text-center text-white items-center justify-center p-4 m-4">
+        <div className="text-5xl text-center text-white items-center justify-center p-4 ">
           <div className="flex items-center justify-center">
             <h1 className="p-4 border-b-4 border-blue-800 hover:border-white">About</h1>
           </div>
         </div>
-        <div className="flex md:flex-row flex-col justify-around items-center m-5 p-4">
-          <div className="aspect-square">
+        <div className="flex md:flex-row flex-col justify-around items-center gap-y-4 p-4">
+          <div className="aspect-square p-4">
             <Image
               width={500}
               height={100}
-              className={`rounded-full border-8 border-blue-800 hover:border-white m-4 ${isHovered ? 'hovered-image' : ''
+              className={`rounded-full border-8 border-blue-800 hover:border-white ${isHovered ? 'hovered-image' : ''
                 }`}
               src={isHovered ? HoverImage : DefaultImage}
               alt=""
@@ -29,9 +29,9 @@ const AboutComponent = () => {
               onMouseLeave={() => setIsHovered(false)}
             />
           </div>
-          <div className="text-center">
+          <div className="">
 
-            <div className="ml-10 flex flex-col max-w-3xl text-start">
+            <div className="ml-10 flex flex-col max-w-3xl text-start items-start">
               <p className=" text-white text-lg">Software Engineer | IBM Certified DataScientist | FullStack Developer | IOT Developer.
               </p><br />
               <p className=" text-white text-lg text-justify">Here&apos;s My Story:</p>
@@ -47,9 +47,9 @@ const AboutComponent = () => {
               <p className=" text-white text-lg">
                 Subsequently, I have also participated in several hackathons and attended meetups too.
               </p>
-              <div className='flex gap-1'>
-                <ResumeComponent />
-              </div>
+
+              <ResumeComponent />
+
             </div>
 
           </div>

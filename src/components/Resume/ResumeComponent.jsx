@@ -20,9 +20,9 @@ const ResumeComponent = () => {
     };
     return (
 
-        <div className="flex justify-around items-center m-5 p-4">
+        <div className="flex justify-around items-center p-4 text-xl">
             
-            <div className="p-4 ring-2 rounded-2xl text-white">
+            <div className="px-8 py-4 bg-blue-800 rounded-lg text-white">
                 <button onClick={handleClick}>Download Resume</button>
             </div>
         </div>

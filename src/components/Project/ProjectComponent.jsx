@@ -9,7 +9,7 @@ const FilterButton = ({ filter, activeFilter, onChange }) => {
     return (
         <div className="p-2">
             <button
-            className={`p-2 text-sm rounded-full text-white ${isActive ? 'bg-blue-500 ' : 'ring-2'} hover:bg-blue-600 focus:outline-none focus:shadow-outline-blue`}
+            className={`px-4 py-2 min-w-max w-auto text-sm rounded-full text-white ${isActive ? 'bg-blue-500 ' : 'border-blue-500'} border-2 transition-all ease-in duration-250 hover:bg-blue-600/30 md:hover:border-transparent focus:outline-none focus:shadow-outline-blue`}
             onClick={() => onChange(filter)}
         >
             {filter}

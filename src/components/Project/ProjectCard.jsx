@@ -9,24 +9,24 @@ const ProjectCard = ({ project }) => {
     }
     return (
         <div className='rounded-3xl m-4'>
-            <div className="flex flex-col bg-indigo-500  ring-2 rounded-3xl shadow-md w-[99%]  md:w-96 h-auto text-start backdrop-filter backdrop-blur-3xl bg-opacity-20 text-white">
+            <div className="flex flex-col bg-indigo-500 rounded-lg shadow-md w-[99%]  md:w-96 min-h-max h-auto text-start backdrop-filter backdrop-blur-3xl bg-opacity-20 text-white">
 
                 <Image
                     height={400}
                     width={400}
                     src={project.ImageURL}
                     alt="Project Image"
-                    className=" rounded-t-3xl p-1  md:h-64 object-cover"
+                    className="rounded-t-md md:h-64 object-cover"
                 />
-                <div className='flex flex-col p-2'>
+                <div className='flex flex-col px-4 py-8'>
                     <h2 className=" text-lg font-semibold">{project.ProjectName}</h2>
                     <br />
                     <div className='flex'>
                         <div>
                             <h3 className=" text-base font-semibold mb-2">Technologies</h3>
-                            <ul className="flex flex-wrap">
+                            <ul className="flex flex-wrap gap-4">
                                 {project.Technologies.map((tech) => (
-                                    <li key={tech} className=" px-2 py-1 ring-2 rounded-2xl text-white mr-2 mb-2">
+                                    <li key={tech} className=" px-4 py-2 ring-2 rounded-full text-white mr-2 mb-2">
                                         {tech}
                                     </li>
                                 ))}
@@ -36,9 +36,9 @@ const ProjectCard = ({ project }) => {
 
                     <div className="mt-4">
                         <h3 className=" text-base font-semibold mb-2">Area</h3>
-                        <ul className="flex flex-wrap">
+                        <ul className="flex flex-wrap gap-4">
                             {project.Area.map((area) => (
-                                <li key={area} className=" px-2 py-1 ring-2 rounded-2xl text-white mr-2 mb-2">
+                                <li key={area} className=" px-4 py-2 ring-2 rounded-full text-white mr-2 mb-2">
                                     {area}
                                 </li>
                             ))}
