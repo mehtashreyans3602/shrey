@@ -1,17 +1,16 @@
 'use client';
 import Footer from "@/components/Footer/Footer";
+import Header from "@/components/Header/Header";
 
 import ProjectComponent from "@/components/Project/ProjectComponent";
 const Project = () => {
-    
+
     return (
         <>
-        
-        <div className="bg-black w-full overflow-scroll">
-        <ProjectComponent/>
-        
-        </div>
-        
+            <Header />
+            <div className="bg-black w-full overflow-scroll">
+                <ProjectComponent />
+            </div>
         </>
     )
 }

@@ -1,6 +1,7 @@
 'use client';
 import React, { useState } from 'react';
 import { Client, Databases, ID } from 'appwrite';
+import { Heading } from '../Macros/Atoms';
 
 const ContactComponent = () => {
     const [formData, setFormData] = useState({
@@ -58,15 +59,13 @@ const ContactComponent = () => {
     };
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black via-blue-950 to-black">
-            <div className="text-5xl text-center text-white items-center justify-center p-4 m-4 ">
-                <div className="flex items-center justify-center">
-                    <h1 className=" p-4 border-b-4 border-blue-800 text-white hover:border-white">Contact Me</h1>
-                </div>
+        <div className="pb-6 min-h-screen flex flex-col items-center justify-center bg-gradient-to-b from-black via-blue-950 to-black">
+            <div className="text-5xl text-center text-white items-center justify-center p-4">
+            <Heading textValue={"Contact"}/>
             </div>
             <div className='drop-shadow-lg backdrop-blur-2xl rounded-lg'>
                 <div className="flex flex-col drop-shadow-lg backdrop-blur-2xl backdrop-brightness-90 p-8 rounded-lg ring-2 shadow-md md:w-96 w-80">
-                    <div className="text-xl text-center items-center justify-center p-4 m-4 ">
+                    <div className="text-xl text-center items-center justify-center p-4">
                         <div className="flex items-center justify-center">
                             <h1 className="p-4 border-b-4 border-blue-800 text-white">Let&apos;s Collaborate</h1>
                         </div>

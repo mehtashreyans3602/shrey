@@ -1,12 +1,11 @@
 'use client';
 import Link from "next/link";
 import { useState } from "react";
-// import { useRouter } from "next/navigation";
+import { useRouter } from "next/router";
 
-// Header component
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  // const router = useRouter(); // Move the useRouter hook inside the component
+  const router = useRouter(); // Move the useRouter hook inside the component
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -15,13 +14,13 @@ const Header = () => {
   const linkStyle = "px-4 py-2 md:hover:border-b-2 md:hover:border-b-white md:hover:bg-gradient-to-t from-white/30 border-t-0 to-transparent transition-all ease-out duration-350 border-2 border-transparent rounded";
 
   // Move the isActive function inside the component
-  // const isActive = (pathname) => router.pathname === pathname;
-  const isActive = () => {"/"}
+  const isActive = (pathname) => router.pathname === pathname;
+  // const isActive = () => {"/"}
   return (
     <>
       <div
         style={{ maxWidth: "100%" }}
-        className="fixed top-0 drop-shadow-lg backdrop-blur-2xl w-full z-10"
+        className="sticky top-0 drop-shadow-lg backdrop-blur-2xl w-full z-10"
       >
         <div className="flex md:justify-around justify-between p-4 items-center text-lg backdrop-blur-2xl text-white">
           <div>
@@ -45,12 +44,8 @@ const Header = () => {
               </Link>
             </div>
           </div>
-          <div className="md:hidden flex justify-end p-4">
-            <button className="text-white" onClick={toggleMenu}>
-              &#9776;
-            </button>
-          </div>
-          {menuOpen && (
+
+          {menuOpen ? (
             <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-black bg-opacity-100">
               <div className="flex justify-end p-4">
                 <button className="text-white" onClick={toggleMenu}>
@@ -72,7 +67,11 @@ const Header = () => {
                 </Link>
               </div>
             </div>
-          )}
+          ) : (<div className="md:hidden flex justify-end p-4">
+            <button className="text-white" onClick={toggleMenu}>
+              &#9776;
+            </button>
+          </div>)}
         </div>
       </div>
     </>

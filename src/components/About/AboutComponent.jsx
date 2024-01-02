@@ -4,17 +4,15 @@ import Image from 'next/image';
 import DefaultImage from '@/Assets/Images/shreyans.jpg';
 import HoverImage from '@/Assets/Images/shreyans2.jpg'; // Replace 'other-image.jpg' with the actual filename of your hover image
 import ResumeComponent from '../Resume/ResumeComponent';
-
+import { Heading } from '../Macros/Atoms';
 const AboutComponent = () => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
     <>
-      <div className="items-center justify-center text-center bg-black">
+      <div className="w-full items-center justify-center text-center">
         <div className="text-5xl text-center text-white items-center justify-center p-4 ">
-          <div className="flex items-center justify-center">
-            <h1 className="p-4 border-b-4 border-blue-800 hover:border-white">About</h1>
-          </div>
+        <Heading textValue={"About"}/> 
         </div>
         <div className="flex md:flex-row flex-col justify-around items-center gap-y-4 p-4">
           <div className="aspect-square p-4">

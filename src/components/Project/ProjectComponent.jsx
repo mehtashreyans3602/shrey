@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Data from "@/Data/projectData";
 import ProjectCard from "./ProjectCard";
+import { Heading } from "../Macros/Atoms";
 
 const FilterButton = ({ filter, activeFilter, onChange }) => {
     const isActive = filter === activeFilter;
@@ -28,10 +29,8 @@ const ProjectComponent = () => {
     };
     return (
         <div className="flex flex-col items-center justify-center text-center bg-gradient-to-b from-black via-blue-950 to-black w-full">
-            <div className="text-5xl text-center text-white items-center justify-center md:p-4 md:m-4 ">
-                <div className="flex items-center justify-center">
-                    <h1 className="mt-20 p-4 border-b-4 border-blue-800 hover:border-white">Projects</h1>
-                </div>
+            <div className="text-5xl text-center text-white items-center justify-center md:p-4 md:m-4">
+            <Heading textValue={"Project"}/>
             </div>
 
             <div className="w-full m-4">

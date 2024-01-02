@@ -4,19 +4,14 @@
 import AboutComponent from "@/components/About/AboutComponent";
 import Footer from "@/components/Footer/Footer";
 import TimeLine from "@/components/About/TimeLine";
+import Header from "@/components/Header/Header";
 const About = () => {
     return (
         <>
-            
-            <div className="bg-black w-full overflow-scroll">
-            <div className=" mt-20">
+            <Header />
             <AboutComponent />
-            </div>
-            <div>
-                <TimeLine/>
-            </div>
-            
-            </div>
+            <TimeLine />
+
         </>
     )
 };
